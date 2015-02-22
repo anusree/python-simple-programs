@@ -1,8 +1,2 @@
 print "hello world"
-
-
-
-
-
-#while True:
-#	pass
+print "hai saju"
