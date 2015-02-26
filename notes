@@ -1,0 +1,30 @@
+github
+============
+1)
+#git status --> to see changed files, new files, new folders etc.
+
+2)
+#git diff --> to see the changes in + and - form.
+
+3)
+#git add <name of modified file> --> to prepare the modified file for commit.
+
+4)
+#git commit <name of modified file> -m "commit messages" --> to commit modified files.
+
+5)
+#git push origin master  --> to push modified files to https://github.com/anusree/python-simple-programs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
