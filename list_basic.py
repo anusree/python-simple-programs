@@ -64,3 +64,96 @@ print names
 names.sort()
 print names
 
+
+#################################
+#List as Stack(last in first out)
+
+	#>>> stack = [3,4,5]
+	#>>> stack.append(6)
+	#>>> stack.append(7)
+	#>>> stack
+	#[3, 4, 5, 6, 7]
+	#>>> stack.pop()
+	#7
+	#>>> stack
+	#[3, 4, 5, 6]
+	#>>> stack.pop()
+	#6
+	#>>> stack
+	#[3, 4, 5]
+	#>>> stack.pop()
+	#5
+	#>>> stack
+	#[3, 4]
+	#>>> 
+
+
+#################################
+#List as Queues(first in first out)
+#To implement a queue, use 'collections.deque' which was designed to have fast appends and pops from both ends.
+
+	#>>> from collections import deque
+	#>>> queue = deque(["Eric","John","Michael"])
+	#>>> queue.append("Terry")
+	#>>> queue.append("Graham")
+	#>>> queue
+	#deque(['Eric', 'John', 'Michael', 'Terry', 'Graham'])
+	#>>> queue.popleft()
+	#'Eric'
+	#>>> queue
+	#deque(['John', 'Michael', 'Terry', 'Graham'])
+	#>>> queue.popleft()
+	#'John'
+	#>>> queue
+	#deque(['Michael', 'Terry', 'Graham'])
+	#>>> 
+
+
+####################################
+#Functional prigramming tools in List
+#There are three built-in functions that are very useful when used with lists: filter(), map(), and reduce()
+
+#1) 
+#filter(function, sequence) returns a sequence consisting of those items from the sequence for which function(item) is true. If sequence is a string or tuple, the result will be of the same type; otherwise, it is always a list.
+#eg:
+
+	#>>> def f(x):
+	#...     return x%3==0 or x%5==0
+	#... 
+	#>>> filter(f,range(2,25))
+	#[3, 5, 6, 9, 10, 12, 15, 18, 20, 21, 24]
+	#>>> 
+
+#2)
+#map(function, sequence) calls function(item) for each of the sequence’s items and returns a list of the return values.
+#eg:
+ 
+	#>>> def cube(x):
+	#...     return x*x*x
+	#... 
+	#>>> map(cube,range(11))
+	#[0, 1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
+	#>>> 
+
+#More than one sequence may be passed; the function must then have as many arguments as there are sequences and is called with the corresponding item from each sequence
+#eg:
+
+	#>>> def add(x,y):
+	#...     return x+y
+	#... 
+	#>>> map(add,range(10),range(10))
+	#[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+	#>>>
+
+#3)
+#reduce(function, sequence) returns a single value constructed by calling the binary function function on the first two items of the sequence, then on the result and the next item, and so on. 
+#eg:
+
+	#>>> def add(x,y):
+	#...     return x+y
+	#... 
+	#>>> reduce(add,range(11))
+	#55
+	#>>> 	
+ 
+
