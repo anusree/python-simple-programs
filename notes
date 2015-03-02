@@ -15,6 +15,11 @@ github
 5)
 #git push origin master  --> to push modified files to https://github.com/anusree/python-simple-programs
 
+6)
+rm -rf python_examples/ --> to remove a folder and its content
+
+7)
+git clone https://github.com/anusree/python-simple-programs.git -->To clone your project from github
 
 
 
